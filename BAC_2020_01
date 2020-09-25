@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+void putere(int n , int& d  , int& p)
+{
+    cout << n << endl << p << endl << d << endl;
+    cout << endl;
+
+    for(int i = 2 ; i <= n ; i++ )
+    {
+        int a = 0;
+        while(n % i == 0)
+        {
+            n = n/i;
+            a++;
+        }
+
+        if(a >= p)
+        {
+            d = i;
+            p = a;
+        }
+
+    }
+    cout << n << endl << p << endl << d;
+
+}
+
+int main()
+{
+    int d , p;
+    putere(15,d,p);
+    return 0;
+}
